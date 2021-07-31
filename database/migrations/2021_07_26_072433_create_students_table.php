@@ -17,7 +17,7 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->string('surname');
             $table->string('other_names');
-            $table->string('image')->nullabele();
+            $table->string('image')->nullable();
             $table->string('sex')->nullable();
             $table->string('matric_no')->nullable();
             $table->string('status')->nullable();
