@@ -80,10 +80,10 @@
     </div>
 
 
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
 
     <div class="mt-4 text-center">
-        <a href="{{url('login')}}">Are you registered? Please Log in</a>
+        <a href="{{url('login')}}">Are you registered? Please Sign in</a>
       </div>
 
     <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
