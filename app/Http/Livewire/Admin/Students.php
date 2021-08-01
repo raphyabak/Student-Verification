@@ -86,7 +86,7 @@ class Students extends Component
 
             $img = Image::make($file);
 
-            $img->resize(400, 400, function ($constraint) {
+            $img->resize(100, 100, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
             })->sharpen(6);

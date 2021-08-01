@@ -36,40 +36,75 @@
                 </form>
             </div>
         </div>
-        {{-- <div class="mx-auto text-center border-0 col-md-6 card" wire:loading wire:target="verify">
-            <div class="card-body text-danger">
-             <img src="{{asset('error.svg')}}">
-            </div>
-         </div> --}}
         @if ($to_verify)
             <div class="mt-5">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="mt-3 col-12">
-                            <div class="border-0 card">
-                                <div class="card-horizontal">
-                                    {{-- <div class="img-square-wrapper"> --}}
-                                        @if ($student->image)
-                                        <img src="{{Storage::disk('s3')->url('photos/' . $student->image)}}">
-                                        @else
-                                        <img class="" src="{{ asset('tech.png') }}" alt="Card image cap">
-                                        @endif
-
-                                    {{-- <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap"> --}}
-                                    {{-- </div> --}}
-                                    <div class="card-body">
-                                        <h4 class="card-title">Surname: {{ $student->surname }}</h4>
-                                        <h4 class="card-title">Other Names: {{ $student->other_names }}</h4>
-                                        <h5 class="card-title">Status: <span class="badge bg-warning"> {{ $student->status }} </span></h5>
-                                        <h5 class="card-title">Level: {{ $student->level }}</h5>
-                                        <h5 class="card-title">Faculty: {{ $student->faculty }}</h5>
-                                        <h5 class="card-title">Department: {{ $student->department }}</h5>
-                                        <h5 class="card-title">Programme: {{ $student->programme }}</h5>
-                                        <h5 class="card-title">Admission Year: {{ $student->year_admit }}</h5>
-
+                <div class="page-content page-container" id="page-content">
+                    <div class="mt-6">
+                        <div class="container row d-flex justify-content-center">
+                            <div class="col-xl-9 col-md-12">
+                                <div class="card user-card-full">
+                                    <div class="row m-l-0 m-r-0">
+                                        <div class="col-md-4 bg-c-lite-green user-profile">
+                                            <div class="text-center text-white card-block">
+                                                <div class="m-b-25">
+                                                    @if ($student->image)
+                                                <img src="{{Storage::disk('s3')->url('photos/' . $student->image)}}">
+                                                @else
+                                                <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="Student-Profile-Image">
+                                                @endif
+                                                     </div>
+                                                <h4 class="f-w-600">{{ $student->surname }}</h4>
+                                                <h5>{{ $student->other_names }}</h5>
+                                                <h3>{{ $student->matric_no }}</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-block">
+                                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Student Information</h6>
+                                                {{-- <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p class="m-b-10 f-w-600">Surname</p>
+                                                        <h5 class="text-muted f-w-400">rntng@gmail.com</h5>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="m-b-10 f-w-600">Other Names</p>
+                                                        <h5 class="text-muted f-w-400">98979989898</h5>
+                                                    </div>
+                                                </div> --}}
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p class="m-b-10 f-w-600">Status</p>
+                                                        <h5 class="text-muted f-w-400">{{ $student->status }}</h5>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="m-b-10 f-w-600">Level</p>
+                                                        <h5 class="text-muted f-w-400">{{ $student->level }}</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p class="m-b-10 f-w-600">Faculty</p>
+                                                        <h5 class="text-muted f-w-400">{{ $student->faculty }}</h5>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="m-b-10 f-w-600">Department</p>
+                                                        <h5 class="text-muted f-w-400">{{ $student->department }}</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p class="m-b-10 f-w-600">Programme</p>
+                                                        <h5 class="text-muted f-w-400">{{ $student->programme }}</h5>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="m-b-10 f-w-600">Admission Year</p>
+                                                        <h5 class="text-muted f-w-400">{{ $student->year_admit }}</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
