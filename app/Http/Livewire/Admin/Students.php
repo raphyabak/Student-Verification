@@ -23,6 +23,7 @@ class Students extends Component
     public $level;
     public $year_admit;
     public $image;
+    public $sex;
 
     public $facprogramme = [];
 
@@ -109,6 +110,7 @@ class Students extends Component
                 'level' => $this->level,
                 'year_admit' => $this->year_admit,
                 'image' => $imageName,
+                'sex'=> $this->sex,
 
             ]);
         } else {
@@ -122,6 +124,7 @@ class Students extends Component
                 'programme' => $this->programme,
                 'level' => $this->level,
                 'year_admit' => $this->year_admit,
+                'sex'=> $this->sex,
 
             ]);
         }

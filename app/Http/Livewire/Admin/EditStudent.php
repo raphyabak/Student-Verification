@@ -22,6 +22,7 @@ class EditStudent extends Component
     public $level;
     public $year_admit;
     public $image;
+    public $sex;
     public $facprogramme = ['Botany',
         'Biochemistry',
         'Computer Science',
@@ -66,6 +67,7 @@ class EditStudent extends Component
         $this->programme = $this->student->programme;
         $this->level = $this->student->level;
         $this->year_admit = $this->student->year_admit;
+        $this->sex = $this->student->sex;
     }
 
     public function editStudent()
@@ -108,6 +110,7 @@ class EditStudent extends Component
                 'level' => $this->level,
                 'year_admit' => $this->year_admit,
                 'image' => $imageName,
+                'sex'=> $this->sex
             ]);
         } else {
             $this->student->update([
@@ -120,6 +123,7 @@ class EditStudent extends Component
                 'programme' => $this->programme,
                 'level' => $this->level,
                 'year_admit' => $this->year_admit,
+                'sex'=> $this->sex
             ]);
         }
 

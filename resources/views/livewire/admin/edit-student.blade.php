@@ -40,6 +40,20 @@
                         @enderror
                     </div>
                     <div class="mb-3">
+                        <label for="sex" class="form-label">Gender</label>
+                        <select wire:model='sex'
+                            class="form-control form-control-lg @error('sex') is-invalid @enderror">
+                            <option value="">Select Student Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        @error('sex')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label for="matric" class="form-label">Matric No.</label>
                         <input type="text" wire:model='matric_no'
                             class="form-control form-control-lg @error('matric_no') is-invalid @enderror"

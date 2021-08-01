@@ -56,6 +56,7 @@
                                                 <h4 class="f-w-600">{{ $student->surname }}</h4>
                                                 <h5>{{ $student->other_names }}</h5>
                                                 <h3>{{ $student->matric_no }}</h3>
+                                                <h4><span class="badge bg-warning">{{$student->sex}}</span> </h4>
                                             </div>
                                         </div>
                                         <div class="col-md-8">
